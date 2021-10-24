@@ -1,1 +1,0 @@
-# technical.hithub.io

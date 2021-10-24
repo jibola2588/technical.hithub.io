@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Document</title>
+</head>
+<style>
+ .nav{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-weight: bold;
+     font-size: 30px;
+     border: 1px solid #000;
+     border-top: 0px;
+     border-left: 0px;
+     border-right: 0px;
+ }
+ .docum{
+     text-align: center;
+     padding-top: 10px;
+     padding-bottom: 15px;
+ }
+ .nav-bar{
+     font-size: 15px;
+     font-weight: normal;
+     height: 120px;
+     overflow-y: scroll;
+     overflow-x: hidden;
+ }
+ .nav-bar p{
+     border-top: 1px solid #000;
+     margin: 0px;
+     padding: 5px 20px ;
+ }
+ a{
+     text-decoration: none;
+     color: #000;
+ }
+ header{
+     margin: 15px;
+     font-size: 26px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ .main-section p,ul{
+     font-size: 18px;
+ }
+ ul ul li{
+     margin: 8px;
+ }
+ .code{
+     background-color: rgba(128, 128, 128, 0.033);
+   padding: 15px;
+ }
+</style>
+<body>
+    <nav class="nav">
+     <div class="docum">
+        JS Documentation
+     </div>
+     <div class="nav-bar">
+      <p><a href="#introduction">Introduction</a></p>
+     <p><a href="#what_you_should_already_know">What you should already know</a></p>
+     <p><a href="#javascript_java">Javascript and java</a></p>
+     <p><a href="#hello_world">Hello World</a></p>
+     <p><a href="#variable">Variable</a></p>
+     <p><a href="#declaring_variables">Declaring Variables</a></p>
+     <p><a href="#global_variables">Global Variables</a></p>
+     <p><a href="#constant">Constant</a></p>
+     <p><a href="#data_types">Data types</a></p>
+     <p><a href="#while_statement">While statement</a></p>
+    </div>
+    </nav>
+    <main>
+    <section class="main-section" id="introduction">
+    <article>
+        <header>Introduction</header>
+        <p>Javascript is a cross-platform,object-oriented scripting language.it is a small and lightweight language.Inside a host a host environment (for example, a web browswer), javascript can be connected to the object
+ of its environment to provide programmatic controlover them.</p>
+ <p>Javascript contains a standard library of objects,such as Array,Date,and Math, and a core set set of language elements such as operators,control structures, and statements.Core javascript can be extended for a variety of purposes
+     by supplementing it with additional objects;<br>for examples;
+ </p>
+ <ul>
+     <li>Client-side javascript extends the core language
+         by supplying objects to control a browser and its Document
+      Object Model(DOM).For example,Client side extensions allow an application to
+      place elements on an HTML form and response to user events such as mouse
+    clicks,form input and page navigation.
+    </li>
+   <p> <li>Server-side Javascript extends the core language by supplying objects relevant to running
+        Javascript on a server to running Javascript on a server.For example,server-side extensions allow
+        an application to communicate with a database,provide continuity of information from one invocation
+        to another of the application,or perform file manipulations on a server.
+    </li><p>
+ </ul>
+    </article>
+    </section>
+    <section class="main-section" id="what_you_should_already_know">
+   <article>
+       <header>What you should already know</header>
+       <p>This guide assumes you have the following basic background: </p>
+       <ul>
+           <li>A general understanding of the internet and world wide wed(WWW)
+           </li>
+           <p><li>Good working knowledge of HyperText Markup Language(HTML)</li>
+       </p>
+       <p><li>Some programming experience.If you are new to programming,try
+           one of the tutorials linked on the main javascript.
+       </li></p>
+        </ul>
+   </article>
+    </section>
+    <section class="main-section" id="javascript_java">
+        <article>
+            <header>Javascript and Java</header>
+        <p>Javascript and java are similar in some way but
+            fundamentally different in some others.The javascript language
+        resembles Java but does not have Java's static typing and strong type checking.
+    Javascript follows Java expression syntax,naming conventions and basic control-flow
+constructs which was the reason why it was renamed from Livescript to Javascript. </p>
+<p>In contrast to java's compile-time system of classes built by decelarations,Javascript
+    supports a runtime system based on a small number of data types representing numeric,
+    Boolean,and string values.Javascript has a prototype-based object model instead of more
+    common class-based object model.The prototype-based model provides dynamic inheritance;
+    that is,what is inherited can vary for individual objects.Javascript also supports functions
+    without any special declarative requirements.Functions can be properties of objects,
+    executing as loosely typed methods.
+</p>
+<p>Javascript is a very free-form language compared to java.You do not have to declare all 
+    variables,classes, and methods.You do not have to be concerned with whether methods 
+    are public,private,or protected, and you do not have to implement interfaces.Variables,
+    parameters,and function return types are not explicitly typed.
+</p>
+        </article>
+    </section>
+    <section class="main-section" id="hello_world">
+        <article>
+            <header>Hello World</header>
+            <p>To get started with writing Javascript,open the scratchpad and write your first
+                "Hello world"Javacript code:</p>
+                <code>
+                    <div class="code">
+                    function greetme(yourName) {
+                        alert("Hello " + yourName);}
+                    greetMe("World");
+                </div></code><p>
+                select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
+              </p>
+        </article>
+    </section>
+        <section class="main-section" id="variables">
+        <article>
+            <header>Variables</header>
+            <p>You use variables as symbolic names for values in your application.The names
+                of variables,called identifiers,conform to certain rules.
+            </p>
+            <p>A Javacript identifier must start with a letter,underscore(_),or dollar sign($);
+                subsequent characters "A" through "Z" (uppercase) and the characters "a" 
+                through "z"(lowercase) </p>
+                <p>You can use ISO 8859-1 or Unicode letters such as a and u in identifiers.
+                    You can also use unicode escape sequences as characters in identifiers.
+                    Some examples of legal naes Number_hits,temp99,and_name.  </p>
+                </article>
+        </section>
+        <section class="main-section" id="declaring_variables">
+      <article>
+      <header>Declaring variables </header>
+     <p>You can declare a variable in three ways:</p>
+     <p>with the keyword var.For example,</p>
+    <code>
+        <div class="code">
+        var x = 42.</div>
+    </code>
+    <p>This syntax can be used to declare both local and global variables.</p>
+    <p>By simply assigning it a value.For example,</p>
+<code>
+    <div class="code">
+    x = 42.</div>
+</code> 
+<p>This always declares a global variable.It generates a strict Javascript
+    warming.You  shouldn't use variant.
+</p>   
+<p>With the keyboard let.For example,</p>
+<code>
+    <div class="code">
+    let y = 13.</div>
+</code>
+<p>This syntax can be used to declare a block scope local variable.See variable
+    scope below.
+</p>
+</article>
+        </section>
+        <section class="main-section" id="variable_scope">
+       <article>
+           <header>Variable scope</header>
+       <p>When you declare outside of any function,it is called a global variable
+           because it is available to any other code in the current document.When
+            you declare a variable within a function,it is called a local variable,
+           because it is available only within that function.
+       </p>
+       <p>Javascript before ECMAScript 2015 does not have block statement scope;
+           rather,a variable declared within a block is local to the function
+           (or global scope)that the block resides within.For example the following
+        code will log 5,because the scope of x is the function(or global context)
+         within which x is declared,not the block,which in this case is an if 
+         statement</p>
+         <code>
+             <div class="code">
+             if (true){ var x = 5; }
+            console.log(x); // 5
+            </div></code>
+            <p>This behaviour changes,when using the let declaration introduced
+                in ECMAScript 2015.
+            </p>
+            <code><div class="code">
+                if (true) {let y = 5; }
+                console.log(y);  // ReferenceError: y 
+                is not 
+                defined
+            </div></code>
+        </article>
+        </section>
+        <section class="main-section" id="global_variables">
+            <br><article>
+                <header>Global Variables</header>
+          <p>Global variables are in fact properties of the global object.
+              In web pages the global object is window,so you can setb and
+               access global variable using the window.variable syntax.  </p>
+            
+            <p>Consequently,you can access global variables declared in
+                 one window or frame by specifying the window or frame
+                  name.For example,if a variable called phoneNumber is 
+                declared in a document,you can refer to this variable from
+            an iframe as parent.phoneNumber. </p>
+                </article>
+        </section>
+        <section class="main-section" id="constant">
+            <article>
+         <header>Constant</header>
+        <p>You can create a read-only,named constant with keyword.
+        The syntax of a constant identifier is the same as for 
+        variable identifier:it must start with a letter,underscore
+         or dollar sign and can contsin alphabetic,numeric,or 
+         underscore characters. 
+    </p>    
+    <code><div class="code">
+        const PI = 3.14;
+    </div></code>
+    <p>A constant cannot change value through assignment or be
+    re-declared while the script is running.It has to be 
+    initialized to a value.
+</p>
+<p>
+    The scope rules for constants are the same as those for let
+     block scope variables.If the const keyword is omitted,the 
+     identifier is assumed to represent a variable.
+</p>
+<p>You cannot declare a constant with the same name as a function
+    or variable in the same scope.For example:
+</p>
+<code>
+    <div class="code">
+    // THIS WILL CAUSE AN ERROR function
+    f() {}; const = 5;// THIS WILL CAUSE
+    AN ERROR ALSLO function f() {
+        const g = 5; var g; //statements}
+</div></code>
+<p>However,objects attributes are not protected,so the following 
+    statement is executed without problems.
+</p>
+<code>
+    <div class="code">
+    const MY_OBJECT = {"key": "value"};<br>
+    MY_OBJECT.key = "otherValue"; 
+</div></code>
+        </article>
+        </section>
+        <br>
+        <section class="main-section" id="data_types">
+            <article><header>Data types</header>
+            <p>The latest ECMAScript standard defines seven data
+                types:
+            </p>
+            <ul>
+                <li>Six data types that are primitive
+  
+                    <ul>
+                        <li>Boolean.true and false.</li>
+                    <li>null.A special keyword denoting a null value.
+                        Because Javascript is case-sensitive,null is
+                        not the same as Null.
+                    </li>
+                    <li>undefined.A top-level property whose value is
+                        undefined.
+                    </li>
+                    <li>Number.42 or 3.14159.</li>
+                   <li>string,"Howdy"</li>    
+                   <li>Symbol (new in ECMAScript 2015).A data type 
+                       whose instances are unique and immutable.
+                    </li>              
+                </ul>
+                </li>
+                <li>and Object.</li>
+            </ul>
+            <p>Although these data types are a relatively small
+                amount,they enable you to perform useful functions 
+                with your applications.Objects and functions are the 
+                other fundamental elements in the language.You can 
+                think of objects as named as containers for values,
+                and functions as procedures that your application can perform. 
+            </p>
+            </article>
+        </section>
+        <section class="main-section" id="else_statement">
+       <article>
+           <header>if ...else statement</header>
+           <p>Use the if statement to execute a statement if a logical 
+               condition is true.Use the optional else clause to execute
+               a statement if the condition is false.An if statement looks as follows:
+           </p>
+           <code><div class="code">
+               if (condition){ statement_1; } 
+               else { statement_2; }
+           </div></code>
+           <p>condition can be any expression that evaluates to true or false.
+               See Boolean for an explanation of what evaluates to true and false.
+               If condition evaluates to true,statement_1 is executed;otherwise,statement
+               _2 is executed.Statement_1 and statement_2 can be any statement,including 
+               further nested if statements.
+           </p>
+           <p>You may also compound the statements using else if to have multiple conditions
+                          </p> 
+       </article>
+        </section>
+    </main>
+</body>
+</html>
